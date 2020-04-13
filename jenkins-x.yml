@@ -1,1 +1,5 @@
 buildPack: javascript
+pipelineConfig:
+  agent:
+    image: sharepointoscar/startbootstrap-one-page-wonder:v1
+#gcr.io/jenkinsxio/builder-nodejs@sha256:044c6464db66c0aa7da3cd411e058727e3e6b4d7552a0013f0b714751a8332e2
