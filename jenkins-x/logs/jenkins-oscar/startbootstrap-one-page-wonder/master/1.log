@@ -1,0 +1,138 @@
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-sbstx[0m
+{"level":"warn","ts":1586738355.5425377,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586738355.5430267,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-88wm9[0m
+{"level":"warn","ts":1586738356.4247394,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586738356.4381833,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-startbootstrap-on-jpl9t-pwzxm[0m
+{"level":"warn","ts":1586738411.6676962,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586738412.9762757,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/startbootstrap-one-page-wonder.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6b5161df719f59e72e2221f6c88f7b9534a2c567
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> node-sass@4.11.0 install /workspace/source/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.11.0/linux-x64-67_binding.node
+Download complete
+Binary saved to /workspace/source/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Caching binary to /builder/home/.npm/node-sass/4.11.0/linux-x64-67_binding.node
+
+> node-sass@4.11.0 postinstall /workspace/source/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /workspace/source/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 648 packages from 439 contributors and audited 9739 packages in 18.781s
+found 526 vulnerabilities (391 low, 2 moderate, 133 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> startbootstrap-one-page-wonder@5.0.4 test /workspace/source
+> echo 'Error: no test specified'
+
+Error: no test specified
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0413 00:40:38.448623      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0413 00:40:38.452643      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0007] Checking for cached layer gcr.io/**-development/cache:fa8f99e176d6c7247535b47d58f0a9ff921107ccd375f1a47a124e02a5458438... 
+[36mINFO[0m[0007] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0007] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0014] Taking snapshot of full filesystem...        
+[36mINFO[0m[0016] Resolving paths                              
+[36mINFO[0m[0018] ENV PORT 8080                                
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] EXPOSE 8080                                  
+[36mINFO[0m[0018] cmd: EXPOSE                                  
+[36mINFO[0m[0018] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] WORKDIR /usr/src/app                         
+[36mINFO[0m[0018] cmd: workdir                                 
+[36mINFO[0m[0018] Changed working directory to /usr/src/app    
+[36mINFO[0m[0018] Creating directory /usr/src/app              
+[36mINFO[0m[0018] Resolving paths                              
+[36mINFO[0m[0018] Taking snapshot of files...                  
+[36mINFO[0m[0021] COPY . .                                     
+[36mINFO[0m[0033] Resolving paths                              
+[36mINFO[0m[0034] Taking snapshot of files...                  
+[36mINFO[0m[0037] CMD ["npm", "start"]                         
+[36mINFO[0m[0037] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0037] Pushing layer gcr.io/**-development/cache:fa8f99e176d6c7247535b47d58f0a9ff921107ccd375f1a47a124e02a5458438 to cache now 
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/startbootstrap-one-page-wonder to an unshallow repository
+Generating change log from git ref 82751b2dcd488c19acd5d32b42e21e45b1210326 => 907fcaebbb6c29ec0da0d037d6549f238d8ca85d
+Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 6b5161df719f59e72e2221f6c88f7b9534a2c567 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for jenkins-oscar/startbootstrap-one-page-wonder and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/jenkins-oscar/startbootstrap-one-page-wonder/releases/tag/v0.0.1
+generated: /workspace/source/charts/startbootstrap-one-page-wonder/templates/release.yaml
+Created Release startbootstrap-one-page-wonder-0-0-1 resource in namespace **
+Updating PipelineActivity jenkins-oscar-startbootstrap-one-page-wonder-master-1 with version 0.0.1
+Updated PipelineActivities jenkins-oscar-startbootstrap-one-page-wonder-master-1 with release notes URL: https://github.com/jenkins-oscar/startbootstrap-one-page-wonder/releases/tag/v0.0.1
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file startbootstrap-one-page-wonder-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjenkins-oscar-startbootstrap-on-jpl9t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app startbootstrap-one-page-wonder version 0.0.1 to namespace **-staging
+WARNING: 
+WARNING: Waiting for the fork of ********************/environment-tia-tequila-staging to appear...
+Forked Git repository to https://github.com/********************/environment-tia-tequila-staging
+Created Pull Request: https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+Added label updatebot to Pull Request https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1
+Pull Request https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/1 is merged at sha 121a99ce453e7603e3e233f839c0ff784de3a74b
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names startbootstrap-one-page-wonder, **-startbootstrap-one-page-wonder, **-staging-startbootstrap-one-page-wonder
